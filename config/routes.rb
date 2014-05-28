@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :notes
+
   root 'welcome#home'
 
   get 'welcome/home'
