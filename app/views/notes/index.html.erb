@@ -1,6 +1,6 @@
 <h1>Notes</h1>
 
-<table>
+<table border>
   <thead>
     <tr>
       <th>User</th>
@@ -17,7 +17,7 @@
         <td><%= note.user_id %></td>
         <td><%= note.lead_id %></td>
         <td><%= note.notes_body %></td>
-        <td><%= note.status %></td>
+        <td><%= note.status.to_s %></td>
         <td><%= link_to 'Show', note %></td>
         <td><%= link_to 'Edit', edit_note_path(note) %></td>
         <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
