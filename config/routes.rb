@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root 'welcome#home'
+
+  get 'welcome/home'
+
+  get 'welcome/index'
+
   resources :leads
 
   devise_for :users
