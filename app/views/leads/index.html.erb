@@ -17,6 +17,7 @@
   <tbody>
     <% @leads.each do |lead| %>
       <tr>
+        <td><%= image_tag avatar_url(lead) %></td>
         <td><%= lead.name %></td>
         <td><%= lead.company %></td>
         <td><%= lead.address %></td>
