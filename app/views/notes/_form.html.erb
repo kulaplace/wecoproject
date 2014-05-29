@@ -25,7 +25,7 @@
   </div>
     <div class="field">
     <%= f.label :status %><br>
-    <%= select_tag(:status, options_for_select([['Hot', 1], ['Warm', 2], ['Cold',3]], 3)) %>
+    <%= select_tag(:status, options_for_select([['Hot', 1], ['Warm', 2], ['Cold', 3], ['Dead', 4]], 4)) %>
   </div>
   <div class="actions">
     <%= f.submit %>

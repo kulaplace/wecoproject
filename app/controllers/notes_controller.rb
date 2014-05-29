@@ -12,7 +12,7 @@ class NotesController < ApplicationController
   def show
   end
 
-  def lead_status
+  def status
     @status_array = ['hot','warm','cold']
   end
 

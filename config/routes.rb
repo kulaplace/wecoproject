@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  post 'notes/status'
+  get 'notes/status'
 
   resources :leads
 
