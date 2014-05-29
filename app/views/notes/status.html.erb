@@ -2,16 +2,21 @@
 
 <div>
 
-<%= form_tag("/notes/status", method: "get") do %>
+<%= form_tag("/notes", method: "get") do %>
 
 <%= label_tag(:status, "Status: " ) %>
 
 <br />
 
-<%= @status_array.each do |choose| %>
+<% @status_array.each do |choose| %>
 
-<%= radio_button_tag(:status, choose) %><br />
+<%= radio_button_tag(:status, choose) %><%= choose %>
+
+<br />
 
 <% end %>
 
+<%= submit_tag 'Submit Current Lead Status', :class => 'btn submit-button' %>
+
+<% end %>
 </div>
