@@ -12,6 +12,10 @@ class NotesController < ApplicationController
   def show
   end
 
+  def lead_status
+    @status_array = ['hot','warm','cold']
+  end
+
   # GET /notes/new
   def new
     @note = Note.new

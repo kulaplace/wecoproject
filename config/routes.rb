@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  post 'notes/status'
+
   resources :leads
 
   devise_for :users
