@@ -8,24 +8,24 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @notes = Note.all
+    @status_array = ['hot','warm','cold', 'dead']
   end
 
   # GET /notes/1
   # GET /notes/1.json
   def show
-  end
-
-  def status
-    @status_array = ['hot','warm','cold']
+    @status_array = ['hot','warm','cold', 'dead']
   end
 
   # GET /notes/new
   def new
     @note = Note.new
+    @status_array = ['hot','warm','cold', 'dead']
   end
 
   # GET /notes/1/edit
   def edit
+    @status_array = ['hot','warm','cold', 'dead']
   end
 
   def admin

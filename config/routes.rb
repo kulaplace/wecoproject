@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'notes/status'
 
-  get ':id/notes/admin' => 'notes#admin'
+  get 'notes/admin'
 
   resources :leads
   resources :notes
