@@ -28,6 +28,9 @@ class NotesController < ApplicationController
   def edit
   end
 
+  def admin
+  end
+
   # POST /notes
   # POST /notes.json
   def create

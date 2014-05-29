@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get 'notes/status'
 
+  get ':id/notes/admin' => 'notes#admin'
+
   resources :leads
 
   devise_for :users
