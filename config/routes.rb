@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  get 'notes/lead_status'
+
   resources :leads
 
   devise_for :users
