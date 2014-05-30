@@ -12,6 +12,9 @@ class LeadsController < ApplicationController
   def show
   end
 
+  def show_all_leads
+  end
+
   # GET /leads/new
   def new
     @lead = Lead.new

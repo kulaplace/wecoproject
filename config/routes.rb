@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  get 'leads/thank_you'
+
   get 'notes/status'
 
   get 'notes/admin'
