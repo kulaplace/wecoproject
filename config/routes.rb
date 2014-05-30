@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'users/name'
+
+  get 'users/email'
+
   resources :notes
 
   root 'welcome#home'
