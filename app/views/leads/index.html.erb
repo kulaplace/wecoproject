@@ -1,8 +1,9 @@
 <h1>Leads</h1>
 
-<table>
+<table border>
   <thead>
     <tr>
+      <th></th>
       <th>Name</th>
       <th>Company</th>
       <th>Address</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @leads.each do |lead| %>
       <tr>
+        <td><%= image_tag avatar_url(lead), size: "50x50" %></td>
         <td><%= lead.name %></td>
         <td><%= lead.company %></td>
         <td><%= lead.address %></td>

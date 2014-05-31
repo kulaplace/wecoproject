@@ -35,11 +35,25 @@
     <%= f.label :status %><br>
     <%= f.number_field :status %>
   </div> -->
-  <div class="field">
+  <!--<div class="field">
     <%= f.label :lead_id %><br>
     <%= f.number_field :lead_id %>
-  </div>
+  </div>-->
   <div class="actions">
     <%= f.submit %>
+  
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+var title = $('#title');
+
+alert(title.html());
+
+});
+
+</script>
+
   </div>
+
 <% end %>
