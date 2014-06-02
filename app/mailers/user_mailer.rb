@@ -1,16 +1,18 @@
 class UserMailer < ActionMailer::Base
-  default from: 'support@weand.co'
+  default from: 'recr002@gmail.com'
  
   def welcome_email(user)
     @user = user
-    @url  = 'http://weand.co'
+    @url  = 'https://mail.google.com'
     mail(to: @user.email, subject: 'Thank you for contacting us!')
   end
 
   def notice_email(admin)
-    @admin = admin
-    @url  = 'http://weand.co'
-    mail(to: @self.email, subject: 'A new lead has contacted us!')
+      if @admin == true 
+        @admin = admin
+        @url  = 'https://mail.google.com'
+        mail(to: @admin.email, subject: 'A new lead has contacted us!')
+      end
   end
 
 end
