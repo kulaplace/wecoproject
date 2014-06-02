@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
    	end
 
    	def send_notice_email
-   		UserMailer.notice_email(admin).deliver
+   		UserMailer.notice_email(self).deliver
    	end
 
 end
