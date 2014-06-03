@@ -1,9 +1,10 @@
 class AdminMailer < ActionMailer::Base
-  default from: "support@weand.co"
+  default from: 'recr002@gmail.com'
 
-  def welcome_email(user)
-    @user = user
-    @url  = 'http://weand.co'
-    mail(to: @user.email, subject: 'You have a new lead!')
+  def welcome_email(lead)
+    @lead = lead
+    @url  = 'https://mail.google.com'
+    mail(to: @lead.email, subject: 'Thank you for contacting us!')
   end
+
 end
