@@ -5,25 +5,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+
+	<link href="https://www.weand.co/fonts/styles.css" rel="stylesheet" type="text/css" media="all"/>
+
+	<link href="https://www.weand.co/css/slick.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+	<link href="https://www.weand.co/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+	<link href="https://www.weand.co/css/main.css" rel="stylesheet" type="text/css" media="all"/>
+
 </head>
-<body>
+	<body>
+		<div class="header">
 
-	<div class="header">
+  			<% if user_signed_in? %>
 
-  <% if user_signed_in? %>
+  				<%= link_to "Log Out",destroy_user_session_path, method: :delete, class: "button" %><br>
 
-  <%= link_to "Log Out",destroy_user_session_path, method: :delete, class: "button" %><br>
+  				Hi, <%= current_user.email %>
 
-
-  Hi, <%= current_user.name %>
-
-
-
-  <% end %>
-
- </div>
-
-<%= yield %>
-
-</body>
+  			<% end %>
+ 		</div>
+			<%= yield %>
+	</body>
 </html>
