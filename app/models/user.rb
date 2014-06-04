@@ -7,11 +7,11 @@ class User < ActiveRecord::Base
   after_create :send_welcome_email, :send_notice_email
 
    	def send_welcome_email
-   		UserMailer.welcome_email(self).deliver
+   		LeadMailer.welcome_email(self).deliver
    	end
 
    	def send_notice_email
-   		UserMailer.notice_email(self).deliver
+   		LeadMailer.notice_email(self).deliver
    	end
 
 end
