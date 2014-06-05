@@ -4,7 +4,7 @@ class UserMailer < ActionMailer::Base
   def welcome_email(lead)
     @lead = lead
     @url  = 'https://mail.google.com'
-    mail(to: @lead.email, subject: 'Thank you for contacting us!')
+    mail(to: @lead.email, subject: 'Thanks for contacting us!')
   end
 
   def notice_email(user)

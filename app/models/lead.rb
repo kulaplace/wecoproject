@@ -19,7 +19,7 @@ class Lead < ActiveRecord::Base
    	end
 
    	def send_notice_email
-   		UserMailer.notice_email(@user).deliver
+   		UserMailer.notice_email(self).deliver
    	end
 
 end
